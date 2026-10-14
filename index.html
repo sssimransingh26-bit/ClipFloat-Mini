@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClipFloat Mini</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="brand">
+          <span class="logo" aria-hidden="true"></span>
+          <div>
+            <h1>ClipFloat Mini</h1>
+            <p class="tagline">Keep small notes within reach.</p>
+          </div>
+        </div>
+        <p class="count" id="snippet-count">0 snippets</p>
+      </header>
+
+      <label class="search-wrap">
+        <span class="sr-only">Search snippets</span>
+        <input
+          id="search"
+          type="search"
+          placeholder="Search snippets…"
+          autocomplete="off"
+          spellcheck="false"
+        />
+      </label>
+
+      <form id="add-form" class="add-form" autocomplete="off">
+        <label class="sr-only" for="snippet-input">New snippet</label>
+        <textarea
+          id="snippet-input"
+          rows="3"
+          placeholder="Type a snippet and press Add"
+          maxlength="2000"
+        ></textarea>
+        <div class="form-row">
+          <p class="form-hint" id="form-error" hidden></p>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+      </form>
+
+      <section id="list" class="list" aria-live="polite"></section>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
